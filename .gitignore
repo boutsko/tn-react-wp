@@ -1,0 +1,12 @@
+build
+node_modules
+.idea
+npm-debug.log
+*~
+\#*\#
+.\#*
+.git_completed
+notes.org
+/src/components/js
+/src/components/na
+/README.md
