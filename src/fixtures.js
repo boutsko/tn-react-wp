@@ -1,29 +1,35 @@
 export const posts = [
   {
-    "string": '1.Hello World!',
-    "image": {
-      "width": 100,
-      "height": 100,
-      "alt": 'World',
-      "src": 'http://www.youramazingplaces.com/wp-content/uploads/2013/04/Beachy-Head-England.jpg'
-    }
+	"line": '1.Hello World!',
+	"image": {
+	  "width": 100,
+	  "height": 100,
+	  "alt": 'World',
+	  "src": 'http://www.youramazingplaces.com/wp-content/uploads/2013/04/Beachy-Head-England.jpg',
+	},
+	"meta": {
+	  "author": "John Smith",
+	  "created_at": new Date(2016, 11, 11),
+	  "updated_at": new Date(2016, 12, 12)
+	},
+	"likes": 5
   },
   {
-    "string": '2.Hello World!',
-    "image": {
-      "width": 100,
-      "height": 100,
-      "alt": 'World',
-      "src": 'http://www.youramazingplaces.com/wp-content/uploads/2013/04/Beachy-Head-England.jpg'
-    }
+	"line": '2.Hello World!',
+	"image": {
+	  "width": 100,
+	  "height": 100,
+	  "alt": 'World',
+	  "src": 'http://www.youramazingplaces.com/wp-content/uploads/2013/04/Beachy-Head-England.jpg'
+	}
   },
   {
-    "string": '3.Hello World!',
-    "image": {
-      "width": 100,
-      "height": 100,
-      "alt": 'World',
-      "src": 'http://www.youramazingplaces.com/wp-content/uploads/2013/04/Beachy-Head-England.jpg'
-    }
+	"line": '3.Hello World!',
+	"image": {
+	  "width": 100,
+	  "height": 100,
+	  "alt": 'World',
+	  "src": 'http://www.youramazingplaces.com/wp-content/uploads/2013/04/Beachy-Head-England.jpg'
+	}
   }
 ]
