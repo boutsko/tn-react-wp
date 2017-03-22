@@ -5,7 +5,7 @@ import Author from './Author'
 import TextBox from './TextBox'
 
 class Meta extends Component {
-  static propTypes = {
+  static PropTypes = {
     author: PropTypes.string,
     created_at: PropTypes.instanceOf(Date),
     updated_at: PropTypes.instanceOf(Date)
@@ -18,7 +18,6 @@ class Meta extends Component {
   };
 
   render() {
-    console.log("meta:", this.props)
     const { author, created_at, updated_at } = this.props
     return (
       <div>

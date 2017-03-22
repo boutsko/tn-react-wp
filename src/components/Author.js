@@ -2,7 +2,7 @@ import  React, { Component, PropTypes } from 'react'
 import TextBox from "./TextBox"
 
 class Author extends Component {
-  static propTypes = {
+  static PropTypes = {
 	name: PropTypes.string
   }
 
@@ -11,7 +11,6 @@ class Author extends Component {
   } 
 
   render() {
-	console.log("author:", this.props)
 	const { name } = this.props
     return (
       <div>
