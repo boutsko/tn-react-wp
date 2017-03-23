@@ -9,8 +9,8 @@ export const posts = [
 	},
 	"meta": {
 	  "author": "John Smith",
-	  "created_at": new Date(2016, 11, 11),
-	  "updated_at": new Date(2016, 12, 12)
+	  "createdAt": new Date(2016, 11, 11),
+	  "updatedAt": new Date(2016, 12, 12)
 	},
 	"likes": 5
   },

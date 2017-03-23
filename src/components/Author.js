@@ -2,7 +2,7 @@ import  React, { Component, PropTypes } from 'react'
 import TextBox from "./TextBox"
 
 class Author extends Component {
-  static PropTypes = {
+  static propTypes = {
 	name: PropTypes.string
   }
 

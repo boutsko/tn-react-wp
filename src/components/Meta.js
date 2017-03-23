@@ -5,25 +5,25 @@ import Author from './Author'
 import TextBox from './TextBox'
 
 class Meta extends Component {
-  static PropTypes = {
+  static propTypes = {
     author: PropTypes.string,
-    created_at: PropTypes.instanceOf(Date),
-    updated_at: PropTypes.instanceOf(Date)
+    createdAt: PropTypes.instanceOf(Date),
+    updatedAt: PropTypes.instanceOf(Date)
   };
 
   static defaultProps = {
     author: "Anonimous",
-    created_at: new Date(),
-    updated_at: new Date()
+    createdAt: new Date(),
+    updatedAt: new Date()
   };
 
   render() {
-    const { author, created_at, updated_at } = this.props
+    const { author, createdAt, updatedAt } = this.props
     return (
       <div>
         <Author name={author} />
-        <TextBox line="Created : "><FormattedDate>{created_at}</FormattedDate></TextBox>
-        <TextBox line="Updated : "><FormattedDate>{updated_at}</FormattedDate></TextBox>
+        <TextBox line="Created : "><FormattedDate>{createdAt}</FormattedDate></TextBox>
+        <TextBox line="Updated : "><FormattedDate>{updatedAt}</FormattedDate></TextBox>
       </div>
     );
   }

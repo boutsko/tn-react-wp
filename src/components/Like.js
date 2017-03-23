@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 
 class Like extends Component {
 
-  static PropTypes = {
+  static propTypes = {
     likes: PropTypes.number 
   };
 
