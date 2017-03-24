@@ -7,10 +7,9 @@ class TextBox extends Component {
 
   render() {
     return (
-      <span>{this.props.string}</span>
+      <span>{this.props.line}{this.props.children}</span>
     );
   }
 }
 
 export default TextBox
-
