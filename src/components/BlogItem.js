@@ -10,10 +10,10 @@ class BlogItem extends Component {
   }
 
   render() {
-	const { line, image, meta, likes } = this.props
+	const { id, line, image, meta, likes, handleLike } = this.props
     return (
       <div>
-		<Like likes={likes} handleLike={this.props.handleLike}/>
+		<Like likes={likes} handleLike={handleLike(id)}/>
         <TextBox line={line}/>
         <Image {...image}/>
 		<Meta {...meta}/>

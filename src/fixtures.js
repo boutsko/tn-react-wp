@@ -23,7 +23,8 @@ export const posts = [
 	  "height": 100,
 	  "alt": 'World',
 	  "src": 'http://www.youramazingplaces.com/wp-content/uploads/2013/04/Beachy-Head-England.jpg'
-	}
+	},
+	"likes": 0
   },
   {
 	"id": 3,
@@ -33,6 +34,7 @@ export const posts = [
 	  "height": 100,
 	  "alt": 'World',
 	  "src": 'http://www.youramazingplaces.com/wp-content/uploads/2013/04/Beachy-Head-England.jpg'
-	}
+	},
+	"likes": 0
   }
 ]
