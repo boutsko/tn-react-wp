@@ -1,24 +1,21 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 
-class Like extends Component {
+function Like (props) {
+  const { likes, handleLike } = props
+  return (
+    <div>
+	  <a href="#" onClick={handleLike}>{likes}</a>
+    </div>
+  )
+}
 
-  static propTypes = {
-    likes: PropTypes.number 
-  };
+Like.propTypes = {
+  likes: PropTypes.number,
+  handleLike: PropTypes.func
+};
 
-  static defaultProps = {
-    likes: 0
-  }
-  
-  render() {
-	const { likes, handleLike } = this.props
-    return (
-      <div>
-        <a href="#" onClick={handleLike}>{likes}</a>
-      </div>
-    )
-  }
+Like.defaultProps = {
+  likes: 0
 }
 
 export default Like
-
