@@ -1,5 +1,6 @@
 export const posts = [
   {
+	"id": 1,
 	"line": '1.Hello World!',
 	"image": {
 	  "width": 100,
@@ -15,6 +16,7 @@ export const posts = [
 	"likes": 5
   },
   {
+	"id": 2,
 	"line": '2.Hello World!',
 	"image": {
 	  "width": 100,
@@ -24,6 +26,7 @@ export const posts = [
 	}
   },
   {
+	"id": 3,
 	"line": '3.Hello World!',
 	"image": {
 	  "width": 100,
