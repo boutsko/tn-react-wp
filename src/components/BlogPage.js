@@ -11,22 +11,11 @@ class BlogPage extends Component {
   }
 
   handleLike = postId => ev => {
-
-	//	incrementLikes(postId) {
-	//    const newPosts =  map(this.state.posts, function(post) {
 	const newPosts =  this.state.posts.map(post => {
-	  if (post.id === postId) {
-        ++post.likes;
-	  }
+	  post.id === postId && post.likes++
 	  return post;
     })
     this.setState({ posts: newPosts });
-
-	
-	/* this.setState({
-	   ...this.props.posts,
-	   ...this.props.posts[id]//: "foo"
-	   })*/
   }
 
   render() {
