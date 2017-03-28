@@ -4,7 +4,7 @@ function Like (props) {
   const { likes, handleLike } = props
   return (
     <div>
-	  <a href="#" onClick={handleLike}>{likes}</a>
+      <a href="#" onClick={handleLike}>{likes}</a>
     </div>
   )
 }

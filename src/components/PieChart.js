@@ -11,9 +11,9 @@ export default class PieChart extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-	this.chart.load({
-	  columns: nextProps.columns
-	})
+    this.chart.load({
+      columns: nextProps.columns
+    })
   }
   
   componentWillUnmount() {

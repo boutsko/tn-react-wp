@@ -3,15 +3,15 @@ import TextBox from "./TextBox"
 
 class Author extends Component {
   static propTypes = {
-	name: PropTypes.string
+    name: PropTypes.string
   }
 
   static defaultProps = {
-	name: '-===-'
+    name: '-===-'
   } 
 
   render() {
-	const { name } = this.props
+    const { name } = this.props
     return (
       <div>
         <TextBox line={name}/>
