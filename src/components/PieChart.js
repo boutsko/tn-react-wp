@@ -15,14 +15,19 @@ export default class PieChart extends React.Component {
       columns: nextProps.columns
     })
   }
-  
+
   componentWillUnmount() {
     this.chart.destroy();
   }
 
   render() {
     return (
-      <div ref='chart' />
+      <div ref='chart'
+           style={{
+             width: '500px'
+             , margin: '20px 20px 20px 20px'
+             , padding: '20px 20px 20px 20px'
+           }}/>
     )
   }
 }

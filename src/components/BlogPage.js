@@ -25,9 +25,9 @@ class BlogPage extends Component {
   render() {
     const posts = this.props
     const columns = this.props.posts.map(post => [post.line, post.likes])
-    
+
     return (
-      <div>
+      <div className="ui two column grid">
         <BlogList {...posts} handleLike={this.handleLike}/>
         <PieChart columns={columns}/>
       </div>

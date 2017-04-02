@@ -14,7 +14,7 @@ class Author extends Component {
     const { name } = this.props
     return (
       <div>
-        <TextBox line={name}/>
+        <span>Author: <TextBox line={name}/></span>
       </div>
     );
   }
