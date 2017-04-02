@@ -5,9 +5,11 @@ import { Button } from 'semantic-ui-react'
 function Like (props) {
   const { likes, handleLike } = props
   return (
-    <Button onClick={handleLike}>
+    <span>Likes : &nbsp;
+      <Button onClick={handleLike}>
       {likes}
-    </Button>
+      </Button>
+    </span>
   )
 }
 
