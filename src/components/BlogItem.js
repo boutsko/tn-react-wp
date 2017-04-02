@@ -1,4 +1,7 @@
 import React, {Component} from 'react'
+
+import { Button } from 'semantic-ui-react'
+
 import TextBox from './TextBox'
 import Image from './Image'
 import Meta from './Meta'
@@ -13,7 +16,9 @@ class BlogItem extends Component {
     const { id, line, image, meta, likes, handleLike } = this.props
     return (
       <div id={id}>
-        <Like likes={likes} handleLike={handleLike(id)}/>
+		<Button>
+          <Like likes={likes} handleLike={handleLike(id)}/>
+		</Button>
         <TextBox line={line}/>
         <Image {...image}/>
         <Meta {...meta}/>
