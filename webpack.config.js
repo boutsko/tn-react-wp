@@ -1,22 +1,32 @@
 var path = require('path')
 
 module.exports = {
-    devtool: 'source-map',
-    entry: [
-        './src/app.js'
-    ],
-    output: {
-        path: path.join(__dirname, 'build'),
-        filename: 'bundle.js',
-        publicPath: '/static/'
-    },
-    module: {
+  devtool: 'source-map',
+  entry: [
+    './src/app.js'
+  ],
+  output: {
+    path: path.join(__dirname, 'build'),
+    filename: 'bundle.js',
+    publicPath: '/static/'
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.js/,
+        loaders: ['babel-loader'],
+        include: path.join(__dirname, 'src')
+      },
+	  {
+        test: /\.css/,
         loaders: [
-            {
-                test: /\.js/,
-                loaders: ['babel-loader'],
-                include: path.join(__dirname, 'src')
-            }
-        ]
-    }
+		  'style-loader',
+		  'css-loader?importLoaders=1'
+		]
+      },
+	  { test: /\.(eot|png|ttf|svg|woff|woff2)$/,
+		loader: 'url-loader'
+	  }
+    ]
+  }
 }
