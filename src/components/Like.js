@@ -1,11 +1,13 @@
 import React, { PropTypes } from 'react'
 
+import { Button } from 'semantic-ui-react'
+
 function Like (props) {
   const { likes, handleLike } = props
   return (
-    <div>
-      <a href="#" onClick={handleLike}>{likes}</a>
-    </div>
+    <Button onClick={handleLike}>
+      {likes}
+    </Button>
   )
 }
 

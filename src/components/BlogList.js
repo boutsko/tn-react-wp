@@ -8,7 +8,9 @@ class BlogList extends Component {
 
   render() {
     const { posts, handleLike } = this.props
-    const blogItemComponents = posts.map(post => <BlogItem key={post.id} {...post} handleLike={handleLike} />)
+    const blogItemComponents = posts.map(post =>
+      <BlogItem key={post.id} {...post}
+                handleLike={handleLike} />)
 
     return (
       <div>
