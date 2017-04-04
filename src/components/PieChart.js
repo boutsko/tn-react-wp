@@ -22,16 +22,17 @@ export default class PieChart extends React.Component {
 
   render() {
     return (
-      <div ref='chart'
-           style={{
-             width: '500px'
-             , margin: '20px 20px 20px 20px'
-             , padding: '20px 20px 20px 20px'
-           }}/>
+      <div ref='chart' style={style} />
     )
   }
 }
 
 PieChart.propTypes = {
   columns: PropTypes.array
+}
+
+const style={
+  width: '500px'
+  , margin: '20px 20px 20px 20px'
+  , padding: '20px 20px 20px 20px'
 }
