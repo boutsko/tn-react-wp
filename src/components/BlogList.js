@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import BlogItem from './BlogItem'
+import React, {PropTypes, Component} from 'react';
+import BlogItem from './BlogItem';
 
 class BlogList extends Component {
   constructor(props) {
@@ -7,10 +7,10 @@ class BlogList extends Component {
   }
 
   render() {
-    const { posts, handleLike } = this.props
+    const { posts, handleLike } = this.props;
     const blogItemComponents = posts.map(post =>
       <BlogItem key={post.id} {...post}
-                handleLike={handleLike} />)
+        handleLike={handleLike} />);
 
     return (
       <div>
@@ -20,4 +20,9 @@ class BlogList extends Component {
   }
 }
 
-export default BlogList
+BlogList.propTypes = {
+  posts: PropTypes.array,
+  handleLike: PropTypes.func
+};
+
+export default BlogList;
