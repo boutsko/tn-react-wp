@@ -1,30 +1,29 @@
-import React, {Component} from 'react'
-import { assign, map } from 'lodash'
-import BlogList from './BlogList'
-import PieChart from './PieChart'
+import React, {Component} from 'react';
+import { assign, map } from 'lodash';
+import BlogList from './BlogList';
+import PieChart from './PieChart';
 
 
 class BlogPage extends Component {
   constructor(props) {
     super(props);
-  }
-
-  state = {
-    posts: this.props.posts
+    this.state = {
+      posts: this.props.posts
+    };
   }
 
   handleLike = postId => ev => {
-    const postsClone = assign({}, this.state.posts)
+    const postsClone = assign({}, this.state.posts);
     const newPosts = map(postsClone, (post) => {
-      post.id === postId && ++post.likes
+      post.id === postId && ++post.likes;
       return post;
-    })
+    });
     this.setState({ posts: newPosts });
   }
 
   render() {
-    const posts = this.props
-    const columns = this.props.posts.map(post => [post.line, post.likes])
+    const posts = this.props;
+    const columns = this.props.posts.map(post => [post.line, post.likes]);
 
     return (
       <div className="ui two column grid">
@@ -35,4 +34,4 @@ class BlogPage extends Component {
   }
 }
 
-export default BlogPage
+export default BlogPage;

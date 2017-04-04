@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react';
 
 import { Item, Icon } from 'semantic-ui-react';
 
-import FormattedDate from './FormattedDate'
-import Author from './Author'
-import TextBox from './TextBox'
+import FormattedDate from './FormattedDate';
+import Author from './Author';
+import TextBox from './TextBox';
 
 class Meta extends Component {
   static propTypes = {
@@ -20,7 +20,7 @@ class Meta extends Component {
   };
 
   render() {
-    const { author, createdAt, updatedAt } = this.props
+    const { author, createdAt, updatedAt } = this.props;
     return (
       <Item.Content>
         <Author name={author} />
@@ -37,4 +37,4 @@ class Meta extends Component {
   }
 }
 
-export default Meta
+export default Meta;

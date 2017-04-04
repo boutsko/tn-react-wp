@@ -7,13 +7,13 @@ export default class PieChart extends React.Component {
     this.chart = c3.generate({
       bindto: ReactDOM.findDOMNode(this.refs.chart),
       data: { columns: this.props.columns, type: 'pie' }
-    })
+    });
   }
 
   componentWillReceiveProps(nextProps) {
     this.chart.load({
       columns: nextProps.columns
-    })
+    });
   }
 
   componentWillUnmount() {
@@ -23,16 +23,16 @@ export default class PieChart extends React.Component {
   render() {
     return (
       <div ref='chart' style={style} />
-    )
+    );
   }
 }
 
 PieChart.propTypes = {
   columns: PropTypes.array
-}
+};
 
 const style={
   width: '500px'
   , margin: '20px 20px 20px 20px'
   , padding: '20px 20px 20px 20px'
-}
+};

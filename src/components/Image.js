@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {PropTypes, Component} from 'react';
 
 class Image extends Component {
   constructor(props) {
@@ -17,4 +17,11 @@ class Image extends Component {
   }
 }
 
-export default Image
+Image.propTypes = {
+  src: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  alt: PropTypes.string
+};
+
+export default Image;

@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {PropTypes, Component} from 'react';
 
 class TextBox extends Component {
   constructor(props) {
@@ -14,4 +14,9 @@ class TextBox extends Component {
   }
 }
 
-export default TextBox
+TextBox.propTypes = {
+  line: PropTypes.string,
+  children: PropTypes.element
+};
+
+export default TextBox;

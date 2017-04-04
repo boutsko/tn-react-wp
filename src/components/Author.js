@@ -1,5 +1,5 @@
-import  React, { Component, PropTypes } from 'react'
-import TextBox from "./TextBox"
+import  React, { Component, PropTypes } from 'react';
+import TextBox from "./TextBox";
 
 class Author extends Component {
   static propTypes = {
@@ -8,16 +8,16 @@ class Author extends Component {
 
   static defaultProps = {
     name: '-===-'
-  } 
+  }
 
   render() {
-    const { name } = this.props
+    const { name } = this.props;
     return (
-      <div>
-        <span>Author: <TextBox line={name}/></span>
-      </div>
+        <div>
+          <span>Author: <TextBox line={name}/></span>
+        </div>
     );
   }
 }
 
-export default Author
+export default Author;
