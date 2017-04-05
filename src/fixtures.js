@@ -24,7 +24,12 @@ export const posts = [
       alt: 'World',
       src: 'http://www.youramazingplaces.com/wp-content/uploads/2013/04/Beachy-Head-England.jpg'
     },
-    likes: 0
+    meta: {
+      author: 'Kevin Brown',
+      createdAt: new Date(2016, 11, 11),
+      updatedAt: new Date(2016, 12, 12)
+    },
+    likes: 2
   },
   {
     id: 3,
@@ -35,6 +40,11 @@ export const posts = [
       alt: 'World',
       src: 'http://www.youramazingplaces.com/wp-content/uploads/2013/04/Beachy-Head-England.jpg'
     },
-    likes: 0
+    meta: {
+      author: 'Lessy Starstrup',
+      createdAt: new Date(2016, 11, 11),
+      updatedAt: new Date(2016, 12, 12)
+    },
+    likes: 3
   }
 ];

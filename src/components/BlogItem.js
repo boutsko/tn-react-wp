@@ -14,7 +14,9 @@ class BlogItem extends Component {
   }
 
   render() {
-    const { id, line, image, meta, likes, handleLike } = this.props;
+    //    const { id, line, image, meta, likes } = this.props.post;
+    const { id, line, image, meta, likes } = this.props
+    const { handleLike } =  this.props
     return (
       <Item>
         <div className="ui three column grid" style={style}>
