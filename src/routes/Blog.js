@@ -16,6 +16,6 @@ export default {
   component: MainLayout,
   childRoutes: [
     Index,
-    PostRoute,
+    PostRoute
   ]
 };
