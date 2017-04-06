@@ -7,6 +7,7 @@ import Image from './Image';
 import Meta from './Meta';
 import Like from './Like';
 import {style} from './style';
+import Link from 'components/elements/Link';
 
 class BlogItem extends Component {
   constructor(props) {
@@ -22,10 +23,14 @@ class BlogItem extends Component {
           <Item.Content>
             <Image {...image}/>
           </Item.Content>
-          <Item.Header>
-            <TextBox line={line}/>
+          <Item.Content>
+            <Item.Header>
+              <Link to={`/posts/${id}`}>
+                <TextBox line={line}/>
+              </Link>
+            </Item.Header>
             <Meta {...meta}/>
-          </Item.Header>
+          </Item.Content>
           <Item.Content>
             <Like likes={likes} handleLike={handleLike(id)}/>
           </Item.Content>

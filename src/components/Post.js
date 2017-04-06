@@ -18,7 +18,6 @@ class Post extends Component {
     return(
       <Item.Group>
         <BlogItem {...post} handleLike={()=>(1)} />
-        <p>Hello</p>
       </Item.Group>
     );
   }
