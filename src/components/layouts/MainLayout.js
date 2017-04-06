@@ -1,12 +1,15 @@
 import React, { PropTypes } from 'react';
 
-import { Segment, Header, Container } from 'semantic-ui-react';
+import { Button, Segment, Header, Container } from 'semantic-ui-react';
 
 import Link from 'components/elements/Link';
+
+import history from 'helpers/history';
 
 const MainLayout = ({ children }) => (
   <Container>
     <Logo />
+    <GoBackButton />
       {children}
     <Footer />
   </Container>
@@ -18,6 +21,10 @@ MainLayout.propTypes = {
 
 export default MainLayout;
 
+const GoBackButton = () => (
+  <Button onClick={() => history.goBack()}>Назад</Button>
+);
+  
 const Logo = () => (
   <Segment>
     <Link to="/">
