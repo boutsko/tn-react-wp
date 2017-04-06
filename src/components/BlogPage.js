@@ -5,9 +5,6 @@ import PieChart from './PieChart';
 
 import request from 'superagent';
 
-import { posts } from '../fixtures';
-
-
 class BlogPage extends Component {
   constructor(props) {
     super(props);
@@ -18,17 +15,17 @@ class BlogPage extends Component {
 
   componentDidMount() {
     this.fetchPosts();
-    console.log("...", this.state.posts);
   }
-  
+
   fetchPosts() {
     request.get(
       'http://localhost:3001/',
-      {},
-      (err, res) => this.setState({ posts: res.body })
+        {},
+        (err, res) => {
+            return this.setState({ posts: res.body })}
     );
   }
-  
+
   handleLike = postId => ev => {
     const postsClone = assign({}, this.state.posts);
     const newPosts = map(postsClone, (post) => {
@@ -39,12 +36,11 @@ class BlogPage extends Component {
   }
 
   render() {
-    console.log("p---", posts)
-//    const columns = posts.map(post => [post.line, post.likes]);
+    const columns = this.state.posts.map(post => [post.line, post.likes]);
     return (
       <div className="ui two column grid">
-        <BlogList posts={posts} handleLike={this.handleLike}/>
-
+        <BlogList posts={this.state.posts} handleLike={this.handleLike}/>
+        <PieChart columns={columns}/>
       </div>
     );
   }
@@ -52,4 +48,3 @@ class BlogPage extends Component {
 
 export default BlogPage;
 
-//<PieChart columns={columns}/>
