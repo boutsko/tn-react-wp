@@ -14,9 +14,10 @@ class Post extends Component {
 
   render() {
     const { handleLike, params } = this.props;
+    const post = posts[params.id-1]
     return(
       <Item.Group>
-        <BlogItem post={posts[params.id-1]} handleLike={()=>(1)} />
+        <BlogItem {...post} handleLike={()=>(1)} />
         <p>Hello</p>
       </Item.Group>
     );
