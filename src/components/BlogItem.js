@@ -9,6 +9,8 @@ import Like from './Like';
 import {style} from './style';
 import Link from 'components/elements/Link';
 
+import { postsPath } from 'helpers/routes';
+
 class BlogItem extends Component {
   constructor(props) {
     super(props);
@@ -25,7 +27,7 @@ class BlogItem extends Component {
           </Item.Content>
           <Item.Content>
             <Item.Header>
-              <Link to={`/posts/${id}`}>
+              <Link to={postsPath(id)}>
                 <TextBox line={line}/>
               </Link>
             </Item.Header>
